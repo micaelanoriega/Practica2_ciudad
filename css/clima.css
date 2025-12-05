@@ -1,0 +1,130 @@
+/* === PÁGINA CLIMA CUZCO === */
+
+/* Si puedes, pon class="pagina-clima" en el <body> de clima.html */
+body.pagina-clima {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(180deg, #f5f0e8 0%, #fefcf8 40%, #f3e1c5 100%);
+  color: #1f2933;
+}
+
+/* Contenedor general de la página de clima */
+.clima-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* Intro de texto */
+.clima-intro {
+  text-align: left;
+  max-width: 640px;
+}
+
+.page-header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.clima-intro p {
+  line-height: 1.6;
+  font-size: 0.98rem;
+  opacity: 0.9;
+}
+
+/* Bloque del gráfico */
+.clima-grafico {
+  margin-top: 2.5rem;
+  background: #ffffffdd;
+  border-radius: 24px;
+  padding: 1.8rem 1.6rem 2rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pequeño título arriba del gráfico */
+.clima-grafico h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* Detalle decorativo tipo cordillera al fondo */
+.clima-grafico::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% 0 -20%;
+  height: 40%;
+  background: linear-gradient(180deg, #f7d9c2 0%, #e9b796 50%, #cf8b6b 100%);
+  opacity: 0.35;
+  clip-path: polygon(
+    0% 60%,
+    10% 45%,
+    22% 58%,
+    35% 35%,
+    50% 55%,
+    65% 40%,
+    78% 52%,
+    90% 38%,
+    100% 60%,
+    100% 100%,
+    0% 100%
+  );
+  pointer-events: none;
+}
+
+/* Contenedor del canvas para control de tamaño */
+.clima-chart-container {
+  position: relative;
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  max-width: 780px;
+  min-height: 260px;
+}
+
+/* Ajustar el canvas para que no sea gigante */
+.clima-chart-container canvas {
+  width: 100% !important;
+  height: 260px !important; /* puedes subir o bajar este valor */
+  display: block;
+}
+
+/* Un pequeño badge opcional tipo altitud */
+.clima-badge {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.6rem;
+  background: #1f2933;
+  color: #fefcf8;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clima-wrapper {
+    padding: 2.2rem 1.2rem 3rem;
+  }
+
+  .clima-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .clima-grafico {
+    padding: 1.6rem 1.2rem 1.8rem;
+    border-radius: 18px;
+  }
+
+  .clima-chart-container canvas {
+    height: 220px !important;
+  }
+}

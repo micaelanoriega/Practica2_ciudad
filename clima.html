@@ -3,28 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Estadísticas de Cusco</title>
+    <title>Clima de Cusco</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/clima.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="brand">Descubre Cusco</div>
-      <nav class="site-nav">
-        <a href="index.html">Inicio</a>
-        <a href="lugares.html">Qué hacer</a>
-        <a href="clima.html" aria-current="page">Estadísticas</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-    </header>
 
-    <main>
+  <body class="pagina-clima">
+    <div class="hero-wrapper">
+      <header class="site-header">
+        <div class="header-inner">
+          <div class="logo">CUZCO</div>
+
+          <nav class="nav-links" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="#ciudad">Ciudad imperial</a>
+            <a href="lugares.html">Cosas para hacer</a>
+
+            <a href="clima.html" aria-current="page">Clima</a>
+            <a href="#">-----</a>
+            <a href="#">-----</a>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="clima-wrapper">
       <section class="page-header">
-        <h1>Estadísticas de turismo</h1>
-        <p>Visitantes mensuales en Cusco durante el año.</p>
+        <h1>Clima en Cuzco</h1>
+        <p>Evolución de la temperatura media mensual en Cuzco.</p>
       </section>
 
-      <section class="chart-wrap">
-        <canvas id="visitorsChart"></canvas>
+      <section class="clima-intro">
+        <p>
+          Cuzco tiene un clima templado de montaña, con días soleados y noches
+          frías. A lo largo del año la sensación térmica cambia bastante entre
+          la temporada seca y la de lluvias.
+        </p>
+      </section>
+
+      <section class="clima-grafico">
+        <h2>Temperatura media por mes (°C)</h2>
+        <div class="clima-badge">3 399 m s. n. m.</div>
+
+        <div class="clima-chart-container">
+          <canvas id="climaBarras"></canvas>
+        </div>
       </section>
     </main>
 
@@ -32,6 +55,14 @@
       <small>© 2025 Descubre Cusco</small>
     </footer>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/clima.js"></script>
   </body>
 </html>
