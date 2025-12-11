@@ -47,14 +47,87 @@
           la temporada seca y la de lluvias.
         </p>
       </section>
-
-      <section class="clima-grafico">
+      <section class="clima-info">
         <h2>Temperatura media por mes (°C)</h2>
         <div class="clima-badge">3 399 m s. n. m.</div>
+      </section>
 
+      <section class="clima-grafico">
         <div class="clima-chart-container">
           <canvas id="climaBarras"></canvas>
         </div>
+      </section>
+      <section class="clima-resumen">
+        <!-- Columna izquierda: mejor época / maleta -->
+        <article class="clima-card">
+          <h3>¿Cuándo es mejor visitar Cuzco?</h3>
+          <p>
+            La temporada seca va de <strong>mayo a septiembre</strong>, con días
+            soleados y cielos muy despejados: ideal para
+            <strong>Machu Picchu</strong> y trekkings.
+          </p>
+          <p>
+            De <strong>noviembre a marzo</strong> la lluvia es más intensa, pero
+            el paisaje se vuelve muy verde y hay menos turistas.
+          </p>
+
+          <h4 style="margin-top: 1rem; font-size: 0.98rem">
+            Qué llevar en la maleta
+          </h4>
+          <ul class="clima-list">
+            <li>Capa por capas: camiseta, sudadera y chaqueta corta.</li>
+            <li>Chubasquero ligero o poncho para lluvias sorpresa.</li>
+            <li>Protector solar, gorro y gafas: el sol pega fuerte.</li>
+            <li>Zapatillas cómodas e impermeables para caminar.</li>
+          </ul>
+        </article>
+
+        <!-- Columna derecha: altura / tabla rápida -->
+        <article class="clima-card">
+          <h3>Tips para la altura y el clima</h3>
+          <p>
+            Cuzco está a <strong>3 399 m s. n. m.</strong>, por lo que es normal
+            sentir cansancio o falta de aire los primeros días.
+          </p>
+          <ul class="clima-list">
+            <li>Evita esfuerzos intensos el primer día.</li>
+            <li>Bebe agua constantemente y come ligero.</li>
+            <li>No abuses del alcohol la primera noche.</li>
+            <li>Infusiones de mate de coca ayudan a adaptarse.</li>
+          </ul>
+
+          <table class="clima-tabla">
+            <thead>
+              <tr>
+                <th>Mes</th>
+                <th>Temp. media</th>
+                <th>Estación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jun–Ago</td>
+                <td>10–12 °C</td>
+                <td>Días despejados, noches frías.</td>
+              </tr>
+              <tr>
+                <td>Sep–Nov</td>
+                <td>12–14 °C</td>
+                <td>Comienza la temporada de lluvias.</td>
+              </tr>
+              <tr>
+                <td>Dic–Mar</td>
+                <td>11–13 °C</td>
+                <td>Lluvias frecuentes, paisaje muy verde.</td>
+              </tr>
+              <tr>
+                <td>Abr–May</td>
+                <td>11–13 °C</td>
+                <td>Fin de lluvias, clima muy agradable.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
       </section>
     </main>
 

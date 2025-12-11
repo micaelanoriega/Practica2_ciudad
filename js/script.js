@@ -1,6 +1,4 @@
-// ===============================
-//  EFECTO BLANCO Y NEGRO -> COLOR
-// ===============================
+//  EFECTO BLANCO Y NEGRO -> COLOR //
 window.addEventListener("load", () => {
   if (document.body.classList.contains("pagina-inicio")) {
     setTimeout(() => {
@@ -9,10 +7,7 @@ window.addEventListener("load", () => {
   }
 });
 
-// ===============================
-//  LOGO COMO BURGER EN MÓVIL
-//  (abre/cierra .nav-links-bottom)
-// ===============================
+//  LOGO COMO BURGER EN MÓVIL //
 const logoLink = document.querySelector(".logo");
 const bottomNav = document.querySelector(".nav-links-bottom");
 

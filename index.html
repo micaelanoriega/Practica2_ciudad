@@ -6,26 +6,18 @@
     <title>Cuzco</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Homemade+Apple&family=Nothing+You+Could+Do&family=Passion+One:wght@400;700;900&family=Rubik+Spray+Paint&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body class="pagina-inicio">
-    <main>
-      <div class="hero-wrapper">
-        <section class="hero" role="banner">
-          <img
-            src="media/fotoprincipal.png"
-            alt="Vista de Cusco"
-            class="hero-img"
-          />
-          <h1 class="hero-title rubik-spray-paint-regular">CUZCO</h1>
-        </section>
-
-        <header class="site-header">
+   <header class="site-header">
           <div class="header-inner">
+            
             <nav class="nav-links" aria-label="Navegación principal">
               <a href="#ciudad">Sobre Cuzco</a>
               <a href="lugares.html">Actividades</a>
@@ -39,18 +31,29 @@
             </nav>
           </div>
         </header>
-      </div>
-      <nav class="nav-links-bottom" aria-label="Navegación principal">
+        <nav class="nav-links-bottom" aria-label="Navegación principal">
         <a href="#ciudad">Sobre Cuzco</a>
         <a href="lugares.html">Actividades</a>
         <a href="clima.html">Clima</a>
         <a href="#">Gastronomía</a>
       </nav>
 
-      <section class="intro-section" id="ciudad">
-        <article class="intro-card">
+
+    <main>
+       
+     
+      <div class="hero-wrapper">
+        <section class="hero" role="banner">
+          <div class="top-container">
+  
+</div>
+          <img
+            src="media/fotoprincipal.png"
+            alt="Vista de Cusco"
+            class="hero-img"
+          />
           <video
-            class="intro-video"
+            class="hero-img"
             autoplay
             loop
             muted
@@ -60,7 +63,22 @@
             <source src="media/videointro.mp4" type="video/mp4" />
             Tu navegador no soporta la etiqueta de video.
           </video>
-          <h2>Experiencias en Cuzco</h2>
+          <h1 class="hero-title castoro-regular">CUZCO</h1>
+          
+        </section>
+        
+
+      </div>
+
+      <section class="intro-section" id="ciudad">
+        <article class="intro-card">
+          <h2>Ciudad Imperial</h2>
+          
+          <img
+            src="media/fotoprincipal.png"
+            alt="Vista de Cusco"
+            class="intro-video"
+          />
           <p>
             Cuzco fue la capital del Imperio Inca y hoy es el punto de partida
             para descubrir Machu Picchu y el Valle Sagrado. Sus calles de
@@ -203,8 +221,36 @@
       </section>
     </main>
 
-    <footer>
-      <p>2025 · Ciudad</p>
+    <!-- === FOOTER === -->
+    <footer class="site-footer" id="footer">
+       <a href="index.html" class="logo">
+                <img src="media/logo.png" alt="Logo sol de Cuzco" />
+              </a>
+      <div class="footer-content">
+        <div class="footer-section">
+         
+        
+          <h3>CUZCO</h3>
+          <p><p>Ciudad Imperial</p></p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      
     </footer>
 
     <!-- jQuery CDN -->
