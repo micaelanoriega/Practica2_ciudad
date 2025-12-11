@@ -1,0 +1,443 @@
+.pagina-gastro {
+  background: radial-gradient(
+    circle at top,
+    #2a1b12 0%,
+    #0b0907 55%,
+    #050304 100%
+  );
+}
+
+.gastro-wrapper {
+  position: relative;
+}
+
+/* Header en esta página */
+.pagina-gastro .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  margin: 0 auto 1.5rem;
+}
+
+/*  HERO GASTRONOMÍA (como mi home) */
+
+.gastro-hero {
+  position: relative;
+  min-height: 80vh;
+
+  overflow: hidden;
+  margin-bottom: 3.5rem;
+
+  margin-top: -6rem;
+}
+
+/* Imagen de fondo */
+.gastro-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) contrast(1.05);
+  z-index: -2;
+}
+
+/* Degradado por encima */
+.gastro-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 30%,
+    rgba(5, 3, 2, 0.95) 100%
+  );
+  z-index: -1;
+}
+
+/* Contenido encima de la foto */
+.gastro-hero-content {
+  position: relative;
+  padding: 5rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/* Texto principal */
+
+.gastro-hero-text {
+  max-width: 34rem;
+}
+
+.gastro-kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 0.4rem;
+}
+
+.gastro-hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+  font: castoro-regular;
+}
+
+.gastro-subtitle {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* ============ INTRO SABORES (dentro del hero) ============ */
+
+.gastro-intro {
+  margin: 0;
+}
+
+.gastro-intro h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.6rem;
+  color: var(--accent-soft);
+}
+
+.gastro-intro > p {
+  max-width: 40rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 1.6rem;
+}
+
+.gastro-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.gastro-pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 1.1rem 1.2rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.gastro-pill h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.4rem;
+  color: var(--accent-soft);
+}
+
+.gastro-pill p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* ============ PLATOS TÍPICOS – CARRUSEL ============ */
+
+.gastro-platos {
+  margin-bottom: 3.5rem;
+}
+
+.gastro-platos header h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor general del carrusel */
+.platos-carousel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Ventana donde aparece el slide */
+.platos-window {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+/* Cada slide */
+.plato-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  background: rgba(24, 14, 10, 0.95);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(8%);
+  pointer-events: none;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.plato-slide.is-active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.plato-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.plato-body {
+  padding: 1.1rem 1.3rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.plato-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.plato-tag {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-soft);
+}
+
+.plato-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Flechas */
+
+.plato-arrow {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.plato-arrow:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+/* Dots */
+
+.platos-dots {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.platos-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  padding: 0;
+}
+
+.platos-dot.is-active {
+  width: 1.4rem;
+  background: var(--accent-soft);
+}
+
+/* ============ MERCADO & COMIDA CALLEJERA ============ */
+
+.gastro-mercado {
+  margin-bottom: 3.5rem;
+}
+
+.gastro-mercado header h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.5rem;
+}
+
+.mercado-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.mercado-texto p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.mercado-lista {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.mercado-tips {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.1rem 1.3rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mercado-tips h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-soft);
+}
+
+.mercado-tips ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ BEBIDAS ============ */
+
+.gastro-bebidas {
+  margin-bottom: 3.5rem;
+}
+
+.gastro-bebidas header h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.5rem;
+}
+
+.bebidas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.bebida-card {
+  background: rgba(24, 14, 10, 0.9);
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.bebida-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.bebida-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 960px) {
+  .gastro-hero {
+    min-height: auto;
+  }
+
+  .gastro-hero-content {
+    padding: 4.5rem 1.5rem 2.5rem;
+  }
+
+  .gastro-pill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mercado-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bebidas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plato-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .plato-media img {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gastro-wrapper {
+    padding-inline: 1.1rem;
+  }
+
+  .gastro-intro,
+  .gastro-platos,
+  .gastro-mercado,
+  .gastro-bebidas {
+    margin-bottom: 2.6rem;
+  }
+
+  .gastro-pill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bebidas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platos-carousel {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 0.8rem;
+  }
+
+  .plato-arrow.plato-prev,
+  .plato-arrow.plato-next {
+    justify-self: center;
+  }
+
+  .platos-window {
+    order: -1;
+  }
+}

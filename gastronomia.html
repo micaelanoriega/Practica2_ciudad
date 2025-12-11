@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gastronomía · Cuzco</title>
+
+    <!-- Estilos generales del sitio -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/gastronomia.css" />
+  </head>
+
+  <body class="pagina-gastro">
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#intro">Sobre Cuzco</a>
+          <a href="lugares.html">Actividades</a>
+
+          <a href="index.html" class="logo">
+            <img src="media/logo.png" alt="Logo sol de Cuzco" />
+          </a>
+
+          <a href="clima.html">Clima</a>
+          <a href="gastronomia.html" aria-current="page">Gastronomía</a>
+        </nav>
+      </div>
+
+      <nav
+        class="nav-links-bottom"
+        id="menu-movil"
+        aria-label="Navegación móvil"
+      >
+        <a href="#intro">Sobre Cuzco</a>
+        <a href="lugares.html">Actividades</a>
+        <a href="clima.html">Clima</a>
+        <a href="gastronomia.html" aria-current="page">Gastronomía</a>
+      </nav>
+    </header>
+
+    <main class="gastro-wrapper">
+      <section class="gastro-hero" id="intro">
+        <img
+          class="gastro-hero-bg"
+          src="media/gastro-hero.jpg"
+          alt="Mesa con platos típicos de Cuzco"
+        />
+
+        <div class="gastro-hero-content">
+          <div class="gastro-hero-text">
+            <p class="gastro-kicker">Sabores de los Andes</p>
+            <h1 class="castoro-regular">GASTRONOMÍA</h1>
+            <p class="gastro-subtitle">
+              Platos que mezclan herencia inca, cocina criolla y productos de
+              altura. Comer en Cuzco también es una forma de hacer turismo.
+            </p>
+          </div>
+
+          <section class="gastro-intro">
+            <header>
+              <h2>Sabores que definen Cuzco</h2>
+            </header>
+
+            <p>
+              La cocina cusqueña combina ingredientes ancestrales como la papa,
+              el maíz y la quinoa con técnicas coloniales y toques
+              contemporáneos. Desde un caldo caliente en el mercado hasta una
+              cena de autor, aquí la comida es parte de la experiencia del
+              viaje.
+            </p>
+
+            <div class="gastro-pill-grid">
+              <article class="gastro-pill">
+                <h3>Productos de altura</h3>
+                <p>
+                  Papas nativas, habas, maíz gigante del Valle Sagrado, quinoa,
+                  tarwi y más ingredientes que solo crecen en los Andes.
+                </p>
+              </article>
+
+              <article class="gastro-pill">
+                <h3>Cocina de mercado</h3>
+                <p>
+                  Jugos, caldos, chicharrones y menús caseros servidos en largas
+                  bancas compartidas con locales.
+                </p>
+              </article>
+
+              <article class="gastro-pill">
+                <h3>Fusión y autor</h3>
+                <p>
+                  Restaurantes que reinterpretan recetas tradicionales con
+                  técnicas modernas y presentaciones cuidadas.
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- PLATOS TÍPICOS -->
+      <section class="gastro-platos" aria-labelledby="platos-titulo">
+        <header>
+          <h2 id="platos-titulo">Platos que tienes que probar</h2>
+        </header>
+
+        <div class="platos-carousel">
+          <button
+            class="plato-arrow plato-prev"
+            type="button"
+            aria-label="Plato anterior"
+          >
+            ‹
+          </button>
+
+          <div class="platos-window">
+            <!-- SLIDE 1 -->
+            <article class="plato-slide is-active" data-index="0">
+              <div class="plato-media">
+                <img src="media/plato-cuy.jpg" alt="Cuy al horno" />
+              </div>
+              <div class="plato-body">
+                <h3>Cuy al horno</h3>
+                <p class="plato-tag">Tradicional · Festivo</p>
+                <p>
+                  Un clásico de la sierra peruana, servido entero y acompañado
+                  de papas, maíz y salsas picantes. Suele reservarse para
+                  ocasiones especiales.
+                </p>
+              </div>
+            </article>
+
+            <!-- SLIDE 2 -->
+            <article class="plato-slide" data-index="1">
+              <div class="plato-media">
+                <img src="media/plato-chiriuchu.jpg" alt="Chiri Uchu" />
+              </div>
+              <div class="plato-body">
+                <h3>Chiri Uchu</h3>
+                <p class="plato-tag">Fiesta del Corpus Christi</p>
+                <p>
+                  Plato frío que mezcla carnes, quesos, maíz tostado y productos
+                  de la costa y la sierra. Es como un mapa comestible del Perú
+                  en un solo plato.
+                </p>
+              </div>
+            </article>
+
+            <!-- SLIDE 3 -->
+            <article class="plato-slide" data-index="2">
+              <div class="plato-media">
+                <img src="media/plato-sopa.jpg" alt="Caldo o sopa criolla" />
+              </div>
+              <div class="plato-body">
+                <h3>Caldo de gallina / sopas</h3>
+                <p class="plato-tag">Mercado · Desayuno potente</p>
+                <p>
+                  En Cuzco es normal empezar el día con sopas calientes llenas
+                  de fideos, papas y hierbas aromáticas para combatir el frío de
+                  la mañana.
+                </p>
+              </div>
+            </article>
+
+            <!-- SLIDE 4 -->
+            <article class="plato-slide" data-index="3">
+              <div class="plato-media">
+                <img src="media/plato-quinoa.jpg" alt="Platos con quinua" />
+              </div>
+              <div class="plato-body">
+                <h3>Quinua en todas sus formas</h3>
+                <p class="plato-tag">Ingrediente andino</p>
+                <p>
+                  Guisos, sopas, ensaladas y postres elaborados con quinua, uno
+                  de los granos andinos más representativos del Perú.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button
+            class="plato-arrow plato-next"
+            type="button"
+            aria-label="Plato siguiente"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="platos-dots" aria-label="Cambiar de plato">
+          <button
+            class="platos-dot is-active"
+            type="button"
+            data-index="0"
+          ></button>
+          <button class="platos-dot" type="button" data-index="1"></button>
+          <button class="platos-dot" type="button" data-index="2"></button>
+          <button class="platos-dot" type="button" data-index="3"></button>
+        </div>
+      </section>
+
+      <!-- CALLE & MERCADO -->
+      <section class="gastro-mercado">
+        <header>
+          <h2>Mercados y comida callejera</h2>
+        </header>
+
+        <div class="mercado-layout">
+          <article class="mercado-texto">
+            <p>
+              Los mercados como San Pedro concentran puestos de jugos, panes,
+              quesos, frutas, hierbas y platos caseros. Son el mejor lugar para
+              ver cómo comen realmente los cusqueños.
+            </p>
+            <ul class="mercado-lista">
+              <li>Jugos de frutas andinas recién hechos</li>
+              <li>Pan chuta y otros panes tradicionales</li>
+              <li>Chicharrones, tamales y anticuchos</li>
+              <li>Hierbas y remedios naturales de la zona</li>
+            </ul>
+          </article>
+
+          <aside
+            class="mercado-tips"
+            aria-label="Consejos para comer en mercados"
+          >
+            <h3>Consejos rápidos</h3>
+            <ul>
+              <li>Ve temprano para ver más movimiento local.</li>
+              <li>Pregunta por platos del día o “menú casero”.</li>
+              <li>
+                Si tienes un estómago sensible, empieza con sopas y platos
+                cocidos.
+              </li>
+              <li>Lleva efectivo en soles para pagar fácilmente.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- DRINKS -->
+      <section class="gastro-bebidas">
+        <header>
+          <h2>Bebidas típicas</h2>
+        </header>
+
+        <div class="bebidas-grid">
+          <article class="bebida-card">
+            <h3>Mate de coca</h3>
+            <p>
+              Infusión de hojas de coca que ayuda a combatir el mal de altura.
+              Se toma caliente, sobre todo por las mañanas o después de comer.
+            </p>
+          </article>
+
+          <article class="bebida-card">
+            <h3>Chicha morada</h3>
+            <p>
+              Bebida dulce hecha a base de maíz morado, piña y especias. Se
+              sirve fría y acompaña muy bien los almuerzos.
+            </p>
+          </article>
+
+          <article class="bebida-card">
+            <h3>Pisco sour & cocteles</h3>
+            <p>
+              Aunque el pisco es costeño, en Cuzco encontrarás bares que lo
+              mezclan con frutas andinas como el maracuyá o el tumbo.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <small>© 2025 Descubre Cuzco · Gastronomía</small>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/gastronomia.js"></script>
+  </body>
+</html>
