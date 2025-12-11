@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cuzco · Ciudad imperial</title>
+    <title>Cuzco</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="pagina-inicio">
     <main>
       <div class="hero-wrapper">
         <section class="hero" role="banner">
@@ -17,74 +21,185 @@
             alt="Vista de Cusco"
             class="hero-img"
           />
-          <h1 class="hero-title">CUZCO</h1>
+          <h1 class="hero-title rubik-spray-paint-regular">CUZCO</h1>
         </section>
 
         <header class="site-header">
           <div class="header-inner">
-            <div class="logo">CUZCO</div>
-
             <nav class="nav-links" aria-label="Navegación principal">
-              <a href="index.html" aria-current="page">Inicio</a>
-              <a href="#ciudad">Ciudad imperial</a>
-              <a href="lugares.html">Cosas para hacer</a>
+              <a href="#ciudad">Sobre Cuzco</a>
+              <a href="lugares.html">Actividades</a>
+
+              <a href="index.html" class="logo">
+                <img src="media/logo.png" alt="Logo sol de Cuzco" />
+              </a>
+
               <a href="clima.html">Clima</a>
-              <a href="#">-----</a>
-              <a href="#">-----</a>
+              <a href="#">Gastronomía</a>
             </nav>
           </div>
         </header>
       </div>
+      <nav class="nav-links-bottom" aria-label="Navegación principal">
+        <a href="#ciudad">Sobre Cuzco</a>
+        <a href="lugares.html">Actividades</a>
+        <a href="clima.html">Clima</a>
+        <a href="#">Gastronomía</a>
+      </nav>
 
       <section class="intro-section" id="ciudad">
         <article class="intro-card">
-          <h2>Ciudad imperial</h2>
+          <video
+            class="intro-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            aria-label="Video de Cuzco"
+          >
+            <source src="media/videointro.mp4" type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+          <h2>Experiencias en Cuzco</h2>
+          <p>
+            Cuzco fue la capital del Imperio Inca y hoy es el punto de partida
+            para descubrir Machu Picchu y el Valle Sagrado. Sus calles de
+            piedra, balcones coloniales y restos arqueológicos conviven con una
+            ciudad llena de vida, mercados locales y festividades andinas.
+          </p>
+          <p>
+            Paseando por el centro histórico puedes encontrar templos coloniales
+            construidos sobre antiguos muros incas, plazas llenas de gente local
+            y viajeros, y miradores desde donde se observa toda la ciudad
+            rodeada de montañas.
+          </p>
+          <p>
+            Además de su patrimonio, Cuzco destaca por su gastronomía, su
+            artesanía textil y una oferta cultural que combina tradiciones
+            ancestrales con propuestas contemporáneas.
+          </p>
+          <p>
+            Descubre algunas de las rutas más icónicas para explorar Cuzco, el
+            Valle Sagrado y Machu Picchu. Toca cada tarjeta para ver más
+            detalles.
+          </p>
         </article>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-          quisquam est ad iure, mollitia nihil quod optio! Eaque aut illo
-          numquam officiis blanditiis ipsam laboriosam enim, cumque fuga
-          suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-          eos. Dolorem quas at natus eaque molestiae laudantium ratione modi
-          quos ducimus nihil, beatae sed molestias cumque ea nesciunt explicabo?
-          Praesentium.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-          quisquam est ad iure, mollitia nihil quod optio! Eaque aut illo
-          numquam officiis blanditiis ipsam laboriosam enim, cumque fuga
-          suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-          eos. Dolorem quas at natus eaque molestiae laudantium ratione modi
-          quos ducimus nihil, beatae sed molestias cumque ea nesciunt explicabo?
-          Praesentium.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-          quisquam est ad iure, mollitia nihil quod optio! Eaque aut illo
-          numquam officiis blanditiis ipsam laboriosam enim, cumque fuga
-          suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-          eos. Dolorem quas at natus eaque molestiae laudantium ratione modi
-          quos ducimus nihil, beatae sed molestias cumque ea nesciunt explicabo?
-          Praesentium.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-          quisquam est ad iure, mollitia nihil quod optio! Eaque aut illo
-          numquam officiis blanditiis ipsam laboriosam enim, cumque fuga
-          suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-          eos. Dolorem quas at natus eaque molestiae laudantium ratione modi
-          quos ducimus nihil, beatae sed molestias cumque ea nesciunt explicabo?
-          Praesentium.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat
-          quisquam est ad iure, mollitia nihil quod optio! Eaque aut illo
-          numquam officiis blanditiis ipsam laboriosam enim, cumque fuga
-          suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
-          eos. Dolorem quas at natus eaque molestiae laudantium ratione modi
-          quos ducimus nihil, beatae sed molestias cumque ea nesciunt explicabo?
-          Praesentium.
-        </p>
+
+        <div class="tours-grid">
+          <!-- CARD 1 -->
+          <article class="tour-card">
+            <div class="tour-card-header">
+              <img
+                src="media/fotoprincipal.png"
+                alt="Tour a Machu Picchu en 1 día"
+                class="tour-img"
+              />
+              <h3 class="tour-title">Machu Picchu en 1 día</h3>
+            </div>
+
+            <div class="tour-body">
+              <p class="tour-meta"><strong>Duración:</strong> 1 día</p>
+              <p class="tour-text">
+                Viaje en tren a Machu Picchu, visita guiada por la ciudadela y
+                tiempo libre para recorrer miradores y tomar fotografías.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Desde</span>
+                  <span class="tour-price-value">309.00 USD</span>
+                </div>
+                <a href="#!" class="tour-btn">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="tour-card">
+            <div class="tour-card-header">
+              <img
+                src="media/fotoprincipal.png"
+                alt="Tour Valle Sagrado y Machu Picchu"
+                class="tour-img"
+              />
+              <h3 class="tour-title">Valle Sagrado + Machu Picchu</h3>
+            </div>
+
+            <div class="tour-body">
+              <p class="tour-meta">
+                <strong>Duración:</strong> 4 días / 3 noches
+              </p>
+              <p class="tour-text">
+                Recorre Pisac, Ollantaytambo y Machu Picchu con alojamiento
+                incluido y guía especializado en historia inca.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Desde</span>
+                  <span class="tour-price-value">565.00 USD</span>
+                </div>
+                <a href="#!" class="tour-btn">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="tour-card">
+            <div class="tour-card-header">
+              <img
+                src="media/fotoprincipal.png"
+                alt="Paquete turístico Cuzco y Machu Picchu"
+                class="tour-img"
+              />
+              <h3 class="tour-title">Cuzco completo</h3>
+            </div>
+
+            <div class="tour-body">
+              <p class="tour-meta">
+                <strong>Duración:</strong> 5 días / 4 noches
+              </p>
+              <p class="tour-text">
+                City tour por Cuzco, Valle Sagrado, Machu Picchu y tiempo libre
+                para explorar barrios como San Blas y mercados locales.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Desde</span>
+                  <span class="tour-price-value">635.00 USD</span>
+                </div>
+                <a href="#!" class="tour-btn">Ver más</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="tour-card">
+            <div class="tour-card-header">
+              <img
+                src="media/fotoprincipal.png"
+                alt="Tour Montaña de 7 Colores"
+                class="tour-img"
+              />
+              <h3 class="tour-title">Machu Picchu + Montaña de 7 colores</h3>
+            </div>
+
+            <div class="tour-body">
+              <p class="tour-meta">
+                <strong>Duración:</strong> 6 días / 5 noches
+              </p>
+              <p class="tour-text">
+                Combina la visita a Machu Picchu con una caminata a la Montaña
+                de 7 Colores y otros paisajes altoandinos.
+              </p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Desde</span>
+                  <span class="tour-price-value">709.00 USD</span>
+                </div>
+                <a href="#!" class="tour-btn">Ver más</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -100,7 +215,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/grafico.js"></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

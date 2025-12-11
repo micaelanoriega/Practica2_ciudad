@@ -4,29 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Clima de Cusco</title>
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/clima.css" />
   </head>
 
   <body class="pagina-clima">
-    <div class="hero-wrapper">
-      <header class="site-header">
-        <div class="header-inner">
-          <div class="logo">CUZCO</div>
+    <header class="site-header">
+      <div class="header-inner">
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#ciudad">Sobre Cuzco</a>
+          <a href="lugares.html">Actividades</a>
 
-          <nav class="nav-links" aria-label="Navegación principal">
-            <a href="index.html">Inicio</a>
-            <a href="#ciudad">Ciudad imperial</a>
-            <a href="lugares.html">Cosas para hacer</a>
+          <a href="index.html" class="logo">
+            <img src="media/logo.png" alt="Logo sol de Cuzco" />
+          </a>
 
-            <a href="clima.html" aria-current="page">Clima</a>
-            <a href="#">-----</a>
-            <a href="#">-----</a>
-          </nav>
-        </div>
-      </header>
-    </div>
+          <a href="clima.html">Clima</a>
+          <a href="#">Gastronomía</a>
+        </nav>
+      </div>
+      <nav class="nav-links-bottom" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="lugares.html">Actividades</a>
+        <a href="clima.html">Clima</a>
+        <a href="#">Gastronomía</a>
+      </nav>
+    </header>
 
+    <!-- CONTENIDO -->
     <main class="clima-wrapper">
       <section class="page-header">
         <h1>Clima en Cuzco</h1>
@@ -51,18 +58,14 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <small>© 2025 Descubre Cusco</small>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/clima.js"></script>
   </body>
 </html>
