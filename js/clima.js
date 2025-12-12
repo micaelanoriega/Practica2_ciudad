@@ -35,16 +35,16 @@ function cargarGraficoClima() {
         data: tempMedia,
         tension: 0.4,
         borderWidth: 3,
-        borderColor: "#ff2e78",
+        borderColor: "rgba(145, 35, 23, 0.94)",
         pointRadius: 0,
-        fill: { target: "origin", above: "rgba(255, 206, 86, 0.25)" },
+        fill: { target: "origin", above: "rgba(162, 148, 112, 0.35)" },
         yAxisID: "y",
       },
       {
         type: "bar",
         label: "Precipitación (mm)",
         data: lluvia,
-        backgroundColor: "rgba(0, 0, 0, 0.18)",
+        backgroundColor: "rgba(243, 144, 144, 0.59)",
         borderRadius: 4,
         maxBarThickness: 18,
         yAxisID: "y1",
@@ -76,7 +76,7 @@ function cargarGraficoClima() {
         x: {
           offset: true,
           ticks: {
-            color: "rgba(255,255,255,0.7)",
+            color: "rgba(123, 91, 16, 0.46)",
             font: { size: 11 },
             padding: 10,
           },
@@ -84,15 +84,15 @@ function cargarGraficoClima() {
         },
         y: {
           ticks: {
-            color: "rgba(255,255,255,0.7)",
+            color: "rgba(145, 35, 23, 0.94)",
             font: { size: 10 },
             padding: 10,
           },
-          grid: { color: "rgba(0,0,0,0.35)" },
+          grid: { color: "rgba(111, 62, 62, 0.35)" },
         },
         y1: {
           ticks: {
-            color: "rgba(255,255,255,0.5)",
+            color: "rgba(243, 144, 144, 0.59)",
             font: { size: 10 },
             padding: 10,
           },
