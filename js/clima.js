@@ -1,41 +1,44 @@
-const ctx = document.getElementById("climaBarras").getContext("2d");
+let climaChart = null;
 
-const meses = [
-  "Ene",
-  "Feb",
-  "Mar",
-  "Abr",
-  "May",
-  "Jun",
-  "Jul",
-  "Ago",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dic",
-];
+function cargarGraficoClima() {
+  const canvas = document.getElementById("climaBarras");
+  if (!canvas) return;
 
-// Temperatura media aproximada Cusco (ejemplo)
-const tempMedia = [11, 12, 13, 13, 12, 11, 10, 11, 12, 13, 14, 12];
-// Lluvia aproximada (mm) solo para la parte “relleno”
-const lluvia = [150, 140, 130, 60, 20, 5, 5, 10, 40, 80, 130, 160];
+  if (climaChart) {
+    climaChart.destroy();
+    climaChart = null;
+  }
 
-new Chart(ctx, {
-  type: "line",
-  data: {
+  const meses = [
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic",
+  ];
+  const tempMedia = [11, 12, 13, 13, 12, 11, 10, 11, 12, 13, 14, 12];
+  const lluvia = [150, 140, 130, 60, 20, 5, 5, 10, 40, 80, 130, 160];
+
+  const datos = {
     labels: meses,
     datasets: [
       {
+        type: "line",
         label: "Temperatura media (°C)",
         data: tempMedia,
         tension: 0.4,
         borderWidth: 3,
         borderColor: "#ff2e78",
         pointRadius: 0,
-        fill: {
-          target: "origin",
-          above: "rgba(255, 206, 86, 0.25)",
-        },
+        fill: { target: "origin", above: "rgba(255, 206, 86, 0.25)" },
+        yAxisID: "y",
       },
       {
         type: "bar",
@@ -43,96 +46,106 @@ new Chart(ctx, {
         data: lluvia,
         backgroundColor: "rgba(0, 0, 0, 0.18)",
         borderRadius: 4,
-        maxBarThickness: 20,
+        maxBarThickness: 18,
         yAxisID: "y1",
       },
     ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        labels: {
-          color: "#fefcf8",
-          font: {
-            size: 11,
+  };
+
+  const config = {
+    data: datos,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+
+      layout: {
+        padding: { top: 12, right: 18, bottom: 12, left: 18 },
+      },
+
+      plugins: {
+        legend: {
+          labels: {
+            color: "#fefcf8",
+            font: { size: 11 },
+            padding: 18,
           },
         },
       },
-      tooltip: {
-        backgroundColor: "rgba(0,0,0,0.8)",
-        padding: 10,
-        titleFont: { size: 12 },
-        bodyFont: { size: 11 },
-      },
-    },
-    scales: {
-      x: {
-        ticks: {
-          color: "rgba(255,255,255,0.7)",
-          font: { size: 11 },
+
+      scales: {
+        x: {
+          offset: true,
+          ticks: {
+            color: "rgba(255,255,255,0.7)",
+            font: { size: 11 },
+            padding: 10,
+          },
+          grid: { display: false },
         },
-        grid: {
-          display: false,
+        y: {
+          ticks: {
+            color: "rgba(255,255,255,0.7)",
+            font: { size: 10 },
+            padding: 10,
+          },
+          grid: { color: "rgba(0,0,0,0.35)" },
         },
-      },
-      y: {
-        position: "left",
-        ticks: {
-          color: "rgba(255,255,255,0.7)",
-          font: { size: 10 },
-        },
-        grid: {
-          color: "rgba(0,0,0,0.35)",
-        },
-        title: {
-          display: true,
-          text: "Temperatura (°C)",
-          color: "rgba(255,255,255,0.7)",
-          font: { size: 11 },
-        },
-      },
-      y1: {
-        position: "right",
-        ticks: {
-          color: "rgba(255,255,255,0.5)",
-          font: { size: 10 },
-        },
-        grid: {
-          display: false,
-        },
-        title: {
-          display: true,
-          text: "Precipitación (mm)",
-          color: "rgba(255,255,255,0.6)",
-          font: { size: 11 },
+        y1: {
+          ticks: {
+            color: "rgba(255,255,255,0.5)",
+            font: { size: 10 },
+            padding: 10,
+          },
+          grid: { display: false },
         },
       },
     },
-  },
-});
+  };
 
-document.addEventListener("DOMContentLoaded", () => {
-  cargarGraficoClima();
-});
-//
-//  LOGO COMO BURGER EN MÓVIL
-//
-const logoLink = document.querySelector(".logo");
-const bottomNav = document.querySelector(".nav-links-bottom");
-
-if (logoLink && bottomNav) {
-  logoLink.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      bottomNav.classList.toggle("is-open");
-    }
+  climaChart = new Chart(canvas, {
+    type: "bar",
+    ...config,
   });
 }
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    bottomNav.classList.remove("is-open");
-  }
+$(function () {
+  cargarGraficoClima();
+
+  $(window).on("resize", function () {
+    if (climaChart) climaChart.resize();
+  });
+
+  const $logo = $(".site-header .logo").first();
+  const $menu = $(".nav-links-bottom");
+
+  $logo.on("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      $menu.toggleClass("is-open");
+    }
+  });
+
+  // Click fuera pa cerrar
+  $(document).on("click", function (e) {
+    if (window.innerWidth > 768) return;
+    if (!$menu.hasClass("is-open")) return;
+
+    const clickedInsideMenu =
+      $(e.target).closest(".nav-links-bottom").length > 0;
+    const clickedLogo = $(e.target).closest(".site-header .logo").length > 0;
+
+    if (!clickedInsideMenu && !clickedLogo) {
+      $menu.removeClass("is-open");
+    }
+  });
+
+  // Click dentro del menú no lo cierra
+  $menu.on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $(window).on("resize", function () {
+    if (window.innerWidth > 768) $menu.removeClass("is-open");
+  });
 });

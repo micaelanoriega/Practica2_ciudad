@@ -6,45 +6,61 @@
     <title>Clima de Cusco</title>
 
     <link rel="stylesheet" href="css/style.css" />
+
     <link rel="stylesheet" href="css/clima.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body class="pagina-clima">
     <header class="site-header">
       <div class="header-inner">
         <nav class="nav-links" aria-label="Navegación principal">
-          <a href="#ciudad">Sobre Cuzco</a>
+          <a href="index.html">Sobre Cuzco</a>
           <a href="lugares.html">Actividades</a>
 
           <a href="index.html" class="logo">
             <img src="media/logo.png" alt="Logo sol de Cuzco" />
           </a>
 
-          <a href="clima.html">Clima</a>
-          <a href="#">Gastronomía</a>
+          <a href="clima.html" aria-current="page">Clima</a>
+
+          <a href="gastronomia.html">Gastronomía</a>
         </nav>
       </div>
-      <nav class="nav-links-bottom" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="lugares.html">Actividades</a>
-        <a href="clima.html">Clima</a>
-        <a href="gastronomia.html">Gastronomía</a>
-      </nav>
     </header>
 
-    <main class="clima-wrapper">
-      <section class="page-header">
-        <h1>Clima en Cuzco</h1>
-        <p>Evolución de la temperatura media mensual en Cuzco.</p>
+    <!-- Menú móvil -->
+    <nav class="nav-links-bottom" aria-label="Navegación principal">
+      <a href="index.html#ciudad">Sobre Cuzco</a>
+      <a href="lugares.html">Actividades</a>
+      <a href="clima.html" aria-current="page">Clima</a>
+      <a href="gastronomia.html">Gastronomía</a>
+    </nav>
+
+    <main class="clima-main">
+      <section class="actividades-hero clima-hero">
+        <img
+          src="media/clima-hero.jpg"
+          alt="Clima en Cusco"
+          class="actividades-hero-bg"
+        />
+
+        <div class="actividades-hero-content">
+          <div class="actividades-hero-text">
+            <p class="actividades-kicker">Altura y estaciones</p>
+            <h1 class="castoro-regular">Clima</h1>
+            <p class="actividades-subtitle">
+              Cuzco tiene un clima templado de montaña, con días soleados y
+              noches frías. A lo largo del año la sensación térmica cambia
+              bastante entre la temporada seca y la de lluvias.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="clima-intro">
-        <p>
-          Cuzco tiene un clima templado de montaña, con días soleados y noches
-          frías. A lo largo del año la sensación térmica cambia bastante entre
-          la temporada seca y la de lluvias.
-        </p>
-      </section>
       <section class="clima-info">
         <h2>Temperatura media por mes (°C)</h2>
         <div class="clima-badge">3 399 m s. n. m.</div>
@@ -68,9 +84,7 @@
             el paisaje se vuelve muy verde y hay menos turistas.
           </p>
 
-          <h4 style="margin-top: 1rem; font-size: 0.98rem">
-            Qué llevar en la maleta
-          </h4>
+          <h4>Qué llevar en la maleta</h4>
           <ul class="clima-list">
             <li>Capa por capas: camiseta, sudadera y chaqueta corta.</li>
             <li>Chubasquero ligero o poncho para lluvias sorpresa.</li>
@@ -160,5 +174,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/clima.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

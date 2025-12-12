@@ -190,7 +190,7 @@ body.pagina-inicio.color footer {
   align-items: center;
   padding-bottom: 0.15rem;
   text-decoration: none;
-  color: var(--negro);
+  color: var(--bg-alt);
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   white-space: nowrap;
