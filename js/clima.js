@@ -50,7 +50,7 @@ new Chart(ctx, {
   },
   options: {
     responsive: true,
-    maintainAspectRatio: false, // <- clave para usar la altura del contenedor
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         labels: {
@@ -116,10 +116,9 @@ new Chart(ctx, {
 document.addEventListener("DOMContentLoaded", () => {
   cargarGraficoClima();
 });
-// ===============================
+//
 //  LOGO COMO BURGER EN MÓVIL
-//  (abre/cierra .nav-links-bottom)
-// ===============================
+//
 const logoLink = document.querySelector(".logo");
 const bottomNav = document.querySelector(".nav-links-bottom");
 

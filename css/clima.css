@@ -1,5 +1,3 @@
-/* ============ RESET & VARIABLES ============ */
-
 *,
 *::before,
 *::after {
@@ -33,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ============ HEADER ============ */
+/* HEADER */
 
 .site-header {
   position: relative;
@@ -55,8 +53,6 @@ body {
   margin-inline: auto;
   border-radius: 0 0 1.125rem 1.125rem;
 }
-
-/* LOGO EN EL HEADER */
 
 .logo {
   display: flex;
@@ -121,8 +117,6 @@ body {
   color: var(--rojo);
 }
 
-/* ============ MENÚ INFERIOR (MÓVIL) ============ */
-
 .nav-links-bottom {
   display: none;
   flex-direction: column;
@@ -169,8 +163,6 @@ body {
   width: 100%;
 }
 
-/* HEADER ESPECÍFICO PÁGINA CLIMA (STICKY ARRIBA) */
-
 .pagina-clima .site-header {
   position: sticky;
   top: 0;
@@ -190,15 +182,13 @@ body {
   justify-content: center;
 }
 
-/* ============ LAYOUT PÁGINA CLIMA ============ */
+/* LAYOUT PÁGINA CLIMA  */
 
 .clima-wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 3rem 1.5rem 4rem;
 }
-
-/* Encabezado de la página */
 
 .page-header h1 {
   font-size: 2.3rem;
@@ -212,8 +202,6 @@ body {
   opacity: 0.9;
 }
 
-/* Intro de texto */
-
 .clima-intro {
   text-align: left;
   max-width: 640px;
@@ -225,8 +213,6 @@ body {
   font-size: 0.98rem;
   opacity: 0.9;
 }
-
-/* Título + badge altitud */
 
 .clima-info {
   display: flex;
@@ -254,7 +240,7 @@ body {
   opacity: 0.9;
 }
 
-/* ============ TARJETA DEL GRÁFICO ============ */
+/* TARJETA DEL GRÁFICO */
 
 .clima-grafico {
   margin-top: 2.2rem;
@@ -266,7 +252,6 @@ body {
   background: linear-gradient(180deg, #2b1911 0%, #7f5130 45%, #c58b47 100%);
 }
 
-/* Ola de color al fondo, como antes */
 .clima-grafico::before {
   content: "";
   position: absolute;
@@ -300,14 +285,11 @@ body {
   min-height: 260px;
 }
 
-/* El canvas se adapta al contenedor y NO se sale */
 .clima-chart-container canvas {
   width: 100% !important;
   height: 100% !important;
   display: block;
 }
-
-/* ============ SECCIONES EXTRA: RESUMEN CLIMA ============ */
 
 .clima-resumen {
   margin-top: 3rem;
@@ -377,7 +359,7 @@ body {
   background: rgba(0, 0, 0, 0.12);
 }
 
-/* ============ RESPONSIVE ============ */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .clima-wrapper {

@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Qué hacer en Cusco</title>
+    <title>Qué hacer en Cuzco</title>
+
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/lugares.css" />
   </head>
-  <body class="pagina-inicio">
+
+  <body class="pagina-actividades">
     <header class="site-header">
       <div class="header-inner">
         <nav class="nav-links" aria-label="Navegación principal">
           <a href="index.html">Sobre Cuzco</a>
-          <a href="lugares.html">Actividades</a>
+          <a href="lugares.html" aria-current="page">Actividades</a>
 
           <a href="index.html" class="logo">
             <img src="media/logo.png" alt="Logo sol de Cuzco" />
@@ -22,104 +25,130 @@
         </nav>
       </div>
     </header>
+
+    <!-- Menú móvil -->
     <nav class="nav-links-bottom" aria-label="Navegación principal">
-      <a href="#ciudad">Sobre Cuzco</a>
-      <a href="lugares.html">Actividades</a>
+      <a href="index.html#ciudad">Sobre Cuzco</a>
+      <a href="lugares.html" aria-current="page">Actividades</a>
       <a href="clima.html">Clima</a>
       <a href="gastronomia.html">Gastronomía</a>
     </nav>
 
-    <main>
-      <nav class="nav-links-bottom" aria-label="Navegación principal">
-        <a href="#ciudad">Sobre Cuzco</a>
-        <a href="lugares.html">Actividades</a>
-        <a href="clima.html">Clima</a>
-        <a href="#">Gastronomía</a>
-      </nav>
+    <main class="actividades-main">
+      <!-- HERO ACTIVIDADES -->
+      <section class="actividades-hero" id="intro">
+        <img
+          class="actividades-hero-bg"
+          src="media/fotoprincipal.png"
+          alt="Paisaje de Cuzco y alrededores"
+        />
 
-      <section class="intro-section" id="ciudad">
-        <h1>Qué hacer en Cusco</h1>
+        <div class="actividades-hero-content">
+          <div class="actividades-hero-text">
+            <p class="actividades-kicker">Guía de actividades</p>
+            <h1 class="castoro-regular">QUÉ HACER EN CUZCO</h1>
+            <p class="actividades-subtitle">
+              Sitios arqueológicos, barrios con vida local y rutas para
+              descubrir la ciudad más allá de Machu Picchu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LUGARES PRINCIPALES -->
+      <section class="lugares-section" aria-labelledby="tit-lugares">
+        <header class="section-header">
+          <h2 id="tit-lugares">Para visitar</h2>
+        </header>
         <div class="filters">
           <input
             id="search"
             type="search"
             placeholder="Buscar atracciones..."
+            aria-label="Buscar atracciones"
           />
-          <select id="category">
+          <select id="category" aria-label="Filtrar por categoría">
             <option value="all">Todas</option>
             <option value="arqueologia">Arqueología</option>
             <option value="cultura">Cultura</option>
             <option value="gastronomia">Gastronomía</option>
           </select>
         </div>
+        <div class="lugares-grid">
+          <article
+            class="lugar-card"
+            data-category="arqueologia"
+            data-title="Machu Picchu"
+          >
+            <h3>Machu Picchu</h3>
+            <p>
+              La ciudadela inca más famosa del mundo, accesible desde Cuzco por
+              tren o caminatas como el Camino Inca.
+            </p>
+          </article>
+
+          <article
+            class="lugar-card"
+            data-category="arqueologia"
+            data-title="Sacsayhuamán"
+          >
+            <h3>Sacsayhuamán</h3>
+            <p>
+              Complejo arqueológico con enormes muros de piedra y vistas
+              panorámicas de toda la ciudad.
+            </p>
+          </article>
+
+          <article
+            class="lugar-card"
+            data-category="cultura"
+            data-title="Barrio de San Blas"
+          >
+            <h3>Barrio de San Blas</h3>
+            <p>
+              Un barrio bohemio lleno de talleres de artesanos, cafés y
+              miradores perfectos para el atardecer.
+            </p>
+          </article>
+
+          <article
+            class="lugar-card"
+            data-category="gastronomia"
+            data-title="Mercado de San Pedro"
+          >
+            <h3>Mercado de San Pedro</h3>
+            <p>
+              Ideal para probar jugos, panes tradicionales y platos típicos como
+              el chicharrón o la sopa de quinoa.
+            </p>
+          </article>
+
+          <article
+            class="lugar-card"
+            data-category="cultura"
+            data-title="Museo Inka"
+          >
+            <h3>Museo Inka</h3>
+            <p>
+              Exhibiciones sobre la historia, cultura y arte del Imperio Inca,
+              ubicado en un edificio colonial.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="lugares-grid">
-        <article
-          class="lugar-card"
-          data-category="arqueologia"
-          data-title="Machu Picchu"
-        >
-          <h2>Machu Picchu</h2>
-          <p>
-            La ciudadela inca más famosa del mundo, accesible desde Cuzco por
-            tren o caminatas como el Camino Inca.
-          </p>
-        </article>
-
-        <article
-          class="lugar-card"
-          data-category="arqueologia"
-          data-title="Sacsayhuamán"
-        >
-          <h2>Sacsayhuamán</h2>
-          <p>
-            Complejo arqueológico con enormes muros de piedra y vistas
-            panorámicas de toda la ciudad.
-          </p>
-        </article>
-
-        <article
-          class="lugar-card"
-          data-category="cultura"
-          data-title="Barrio de San Blas"
-        >
-          <h2>Barrio de San Blas</h2>
-          <p>
-            Un barrio bohemio lleno de talleres de artesanos, cafés y miradores
-            perfectos para el atardecer.
-          </p>
-        </article>
-
-        <article
-          class="lugar-card"
-          data-category="gastronomia"
-          data-title="Mercado de San Pedro"
-        >
-          <h2>Mercado de San Pedro</h2>
-          <p>
-            Ideal para probar jugos, panes tradicionales y platos típicos como
-            el chicharrón o la sopa de quinoa.
-          </p>
-        </article>
-        <article
-          class="lugar-card"
-          data-category="cultura"
-          data-title="Museo Inka"
-        >
-          <h2>Museo Inka</h2>
-          <p>
-            Exhibiciones sobre la historia, cultura y arte del Imperio Inca,
-            ubicado en un edificio colonial.
-          </p>
-        </article>
+      <!-- TOURS / PAQUETES -->
+      <section class="tours-section" aria-labelledby="tit-tours">
+        <header class="section-header">
+          <h2 id="tit-tours">Tours y paquetes destacados</h2>
+        </header>
 
         <div class="tours-grid">
           <!-- CARD 1 -->
           <article class="tour-card">
             <div class="tour-card-header">
               <img
-                src="media/fotoprincipal.png"
+                src="media/machupichu.webp"
                 alt="Tour a Machu Picchu en 1 día"
                 class="tour-img"
               />
@@ -146,11 +175,11 @@
           <article class="tour-card">
             <div class="tour-card-header">
               <img
-                src="media/fotoprincipal.png"
+                src="media/valle-sagrado.jpg"
                 alt="Tour Valle Sagrado y Machu Picchu"
                 class="tour-img"
               />
-              <h3 class="tour-title">Valle Sagrado + Machu Picchu</h3>
+              <h3 class="tour-title">Valle Sagrado</h3>
             </div>
 
             <div class="tour-body">
@@ -175,7 +204,7 @@
           <article class="tour-card">
             <div class="tour-card-header">
               <img
-                src="media/fotoprincipal.png"
+                src="media/cuzcocompleto.webp"
                 alt="Paquete turístico Cuzco y Machu Picchu"
                 class="tour-img"
               />
@@ -204,11 +233,11 @@
           <article class="tour-card">
             <div class="tour-card-header">
               <img
-                src="media/fotoprincipal.png"
+                src="media/7colores.jpg"
                 alt="Tour Montaña de 7 Colores"
                 class="tour-img"
               />
-              <h3 class="tour-title">Machu Picchu + Montaña de 7 colores</h3>
+              <h3 class="tour-title">Montaña de 7 Colores</h3>
             </div>
 
             <div class="tour-body">
@@ -232,14 +261,12 @@
       </section>
     </main>
 
-    <footer>
-      <p>2025 · Ciudad</p>
-    </footer>
-
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <small>© 2025 Descubre Cusco</small>
+      <small>© 2025 Descubre Cuzco</small>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/lugares.js"></script>
   </body>
 </html>

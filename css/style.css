@@ -23,7 +23,7 @@ html {
   font-size: 16px;
 }
 
-/* ============ BASE ============ */
+/*  BASE */
 
 body {
   margin: 0;
@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* B&W SOLO PARA EL CONTENIDO (NO EL HEADER/LOGO) EN LA HOME */
+/* B&W SOLO PARA EL CONTENIDO  */
 body.pagina-inicio main,
 body.pagina-inicio footer {
   filter: grayscale(100%);
@@ -45,7 +45,7 @@ body.pagina-inicio.color footer {
   filter: grayscale(0%);
 }
 
-/* ============ HERO ============ */
+/*  HERO  */
 
 .hero-wrapper {
   position: relative;
@@ -92,11 +92,12 @@ body.pagina-inicio.color footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 55%;
+  height: 70%;
   background: linear-gradient(
     to bottom,
-    rgba(49, 35, 21, 0) 0%,
-    rgba(149, 134, 107, 0.75) 80%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(30, 22, 15, 0.45) 35%,
+    rgba(30, 22, 15, 0.75) 65%,
     var(--bg-alt) 100%
   );
   z-index: 1;
@@ -123,7 +124,7 @@ body.pagina-inicio.color footer {
   z-index: 2;
 }
 
-/* ============ HEADER ============ */
+/* HEADER */
 
 .site-header {
   position: sticky;
@@ -215,7 +216,7 @@ body.pagina-inicio.color footer {
   color: var(--rojo);
 }
 
-/* ============ MENÚ “BURGER” (NAV-LINKS-BOTTOM) ============ */
+/* MENÚ “BURGER” (NAV-LINKS-BOTTOM) */
 
 .nav-links-bottom {
   display: none;
@@ -242,7 +243,7 @@ body.pagina-inicio.color footer {
 .nav-links-bottom a {
   text-decoration: none;
   color: var(--blanco);
-  font-size: 1rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   position: relative;
   padding-bottom: 0.2rem;
@@ -263,175 +264,152 @@ body.pagina-inicio.color footer {
   width: 100%;
 }
 
-/* ============ INTRO ============ */
+/* INTRO */
 
 .intro-section {
-  position: relative;
-  margin-top: 2rem;
-  padding: 16px;
-  background: linear-gradient(
-    to bottom,
-    rgba(49, 35, 21, 0) 0%,
-    rgba(149, 134, 107, 0.75) 80%,
-    var(--bg-alt) 100%
-  );
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  padding: 3.5rem 1.5rem 0;
 }
 
-.intro-card {
-  position: relative;
-  margin: 0 auto;
-  max-width: 900px;
+.intro-header {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.intro-card::before,
-.intro-card::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  width: 50%;
-  height: 20px;
-  background-color: #dcdcdc;
-  z-index: -1;
-}
-
-.intro-card::before {
-  left: 0;
-  transform-origin: left bottom;
-  transform: skewX(-10deg);
-}
-
-.intro-card::after {
-  right: 0;
-  transform-origin: right bottom;
-  transform: skewX(10deg);
-}
-
-.intro-card h2 {
-  margin: 0;
-  font-size: 1.1rem;
-  letter-spacing: 0.18em;
+.intro-kicker {
+  font-size: 0.85rem;
   text-transform: uppercase;
-  color: var(--rojo);
-  font-family: castoro-regular;
+  letter-spacing: 0.18em;
+  color: var(--accent-soft);
+  margin: 0 0 0.4rem;
+  align-items: center;
 }
 
-/* ============ VIDEO ============ */
-
-.intro-video {
-  margin-top: 6rem;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  border-radius: 0;
-  margin-bottom: 2rem;
-  object-fit: cover;
-
-  position: relative;
-  filter: brightness(0.4) contrast(1.05);
+.intro-header h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  font-weight: 550;
+  text-transform: uppercase;
 }
 
-/* === GRID DE TOURS EN INTRO === */
+.intro-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
 
-.tours-grid {
-  margin-top: 3rem;
+/* Grid de cardss */
+
+.intro-card-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 2rem;
-  align-items: flex-start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
 }
 
-.tour-card {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+.intro-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* carddd */
+
+.intro-card-simple {
+  background: rgba(24, 14, 10, 0.98);
   border-radius: 24px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
   overflow: hidden;
+  box-shadow: 0 18px 45px rgba(31, 19, 6, 0.482);
   display: flex;
   flex-direction: column;
+  height: 100%;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
-.tour-card-header {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+.intro-card-media {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
-.tour-img {
+.intro-card-media img {
+  display: block;
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.tour-title {
-  padding: 0.9rem 1.2rem 1rem;
+.intro-card-body {
+  padding: 1.3rem 1.4rem 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 0.8rem;
+  align-items: center;
+}
+
+.intro-card-body h3 {
+  grid-column: 1 / -1;
+  margin: 0;
   font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   font-weight: 600;
-  color: var(--accent-soft);
-  text-align: center;
 }
 
-.tour-body {
-  padding: 0.9rem 1.3rem 1.4rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  display: none;
-}
-
-.tour-meta {
-  font-size: 0.86rem;
-  margin: 0 0 0.4rem;
-}
-
-.tour-text {
+.intro-card-body p {
+  margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  margin: 0 0 1rem;
+  color: var(--muted);
 }
 
-.tour-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.4rem;
+.intro-card-arrow {
+  font-size: 1.4rem;
+  justify-self: flex-end;
 }
 
-.tour-price-label {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #ddd5c7;
+/* Hover */
+
+.intro-card-simple:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(71, 52, 8, 0.634);
+  background: rgba(24, 14, 10, 1);
 }
 
-.tour-price-value {
-  font-weight: 700;
-  font-size: 1rem;
+.intro-card-simple:hover .intro-card-media img {
+  transform: scale(1.03);
 }
 
-.tour-btn {
-  display: inline-block;
-  padding: 0.55rem 1.1rem;
-  border-radius: 999px;
-  background: #f6ae2d;
-  color: #522c23;
-  font-size: 0.85rem;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+@media (max-width: 960px) {
+  .intro-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro-card-media img {
+    height: 200px;
+  }
+  .intro-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.tour-card-header:hover .tour-img {
-  filter: brightness(1.05);
-  transform: scale(1.01);
-  transition: transform 0.25s ease, filter 0.25s ease;
+@media (max-width: 640px) {
+  .intro-section {
+    padding: 2.5rem 1.2rem 0;
+  }
+
+  .intro-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card-media img {
+    height: 210px;
+  }
 }
 
-/* ============ FOOTER ============ */
+/* FOOTER */
 
 footer,
 .site-footer {
@@ -439,28 +417,6 @@ footer,
   padding: 2rem 1rem 3rem;
   font-size: 0.8rem;
   color: #777;
-}
-
-/* ============ RESPONSIVE ============ */
-
-@media (max-width: 1024px) {
-  .tours-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .tour-img {
-    height: 200px;
-  }
-}
-
-@media (max-width: 640px) {
-  .tours-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tour-img {
-    height: 190px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -524,7 +480,7 @@ footer,
   .nav-links-bottom a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     position: relative;
@@ -547,27 +503,23 @@ footer,
   }
 
   .intro-section {
-    padding: 0 1.5rem 3rem;
-    margin-top: 3rem;
+    margin-top: -1.5rem;
+    padding-inline: 1.2rem;
   }
 
   .intro-card {
-    padding: 1.4rem 1.2rem;
-  }
-
-  .hero-title {
-    letter-spacing: 0.18rem;
+    padding: 2.1rem 1.5rem 2.3rem;
+    border-radius: 22px;
   }
 
   .intro-video {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: 1.2rem 0 1.6rem;
+    max-height: 320px;
+  }
+  .hero {
+    margin-top: -11rem;
   }
 }
-
-/* NAV AUXILIAR (SI LO USAS EN OTRO LADO) */
 
 .site-nav ul {
   gap: 1.2rem;
