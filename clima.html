@@ -132,49 +132,60 @@
 
         <article class="clima-card">
           <h3>Qué llevar en la maleta</h3>
-          <ul class="clima-list">
-            <section
-              class="maleta-wrap"
-              aria-label="Mini juego: prepara tu maleta"
-            >
-              <div class="maleta-items" aria-label="Objetos para arrastrar">
-                <div class="maleta-item" data-item="camiseta">
-                  <img src="media/maleta/camiseta.png" alt="Camiseta" />
-                  <span>Camiseta</span>
-                </div>
-                <div class="maleta-item" data-item="sudadera">
-                  <img src="media/maleta/sudadera.png" alt="Camiseta" />
-                  <span>Sudadera</span>
-                </div>
-                <div class="maleta-item" data-item="gorra">
-                  <img src="media/maleta/gorra.png" alt="gorra" />
-                  <span>Gorra</span>
-                </div>
-                <div class="maleta-item" data-item="gafas">
-                  <img src="media/maleta/gafas.png" alt="gafas" />
-                  <span>Gafas</span>
-                </div>
-                <div class="maleta-item" data-item="zapatillas">
-                  <img src="media/maleta/zapatillas.png" alt="gafas" />
-                  <span>Zapatillas</span>
-                </div>
-              </div>
 
-              <div class="maleta-drop" id="maletaDrop">
-                <img class="maleta-bg" src="media/maleta/maleta.png" alt="" />
-
-                <div class="maleta-ui">
-                  <button class="maleta-reset">Vaciar</button>
+          <section
+            class="maleta-wrap"
+            aria-label="Mini juego: prepara tu maleta"
+          >
+            <div class="maleta-grid">
+              <!-- COLUMNA MALETA -->
+              <div class="maleta-col maleta-col-drop">
+                <div class="maleta-drop" id="maletaDrop">
+                  <img
+                    class="maleta-bg"
+                    src="media/maleta/maleta.png"
+                    alt="Maleta"
+                  />
 
                   <div class="maleta-inside">
                     <div class="maleta-packed"></div>
                   </div>
-
-                  <p class="maleta-title">Arrastra a la maleta</p>
                 </div>
+                <!--<p class="maleta-title">Arrastra a la maleta</p>-->
               </div>
-            </section>
-          </ul>
+
+              <!-- COLUMNA ITEMS -->
+              <div class="maleta-col maleta-col-items">
+                <div class="maleta-items" aria-label="Objetos para arrastrar">
+                  <div class="maleta-item" data-item="camiseta">
+                    <img src="media/maleta/camiseta.png" alt="Camiseta" />
+                    <span>Camiseta</span>
+                  </div>
+
+                  <div class="maleta-item" data-item="sudadera">
+                    <img src="media/maleta/sudadera.png" alt="Sudadera" />
+                    <span>Sudadera</span>
+                  </div>
+
+                  <div class="maleta-item" data-item="gorra">
+                    <img src="media/maleta/gorra.png" alt="Gorra" />
+                    <span>Gorra</span>
+                  </div>
+
+                  <div class="maleta-item" data-item="gafas">
+                    <img src="media/maleta/gafas.png" alt="Gafas" />
+                    <span>Gafas</span>
+                  </div>
+
+                  <div class="maleta-item" data-item="zapatillas">
+                    <img src="media/maleta/zapatillas.png" alt="Zapatillas" />
+                    <span>Zapatillas</span>
+                  </div>
+                </div>
+                <button class="maleta-reset">Vaciar</button>
+              </div>
+            </div>
+          </section>
         </article>
       </section>
     </main>
@@ -209,8 +220,8 @@
     </footer>
     <div class="viaje-modal" id="viajeModal" aria-hidden="true">
       <div class="viaje-box">
-        <h3>¿Estás listo para tu viaje?</h3>
-        <p>Ya tienes todo en la maleta.<br />¡Buen viaje! ✈️</p>
+        <h3>¡Ya estás listo para tu viaje!</h3>
+        <p>Ya tienes todo en la maleta.<br />¡Disfruta!</p>
 
         <a href="index.html" class="viaje-ok"> Empezar el viaje </a>
       </div>

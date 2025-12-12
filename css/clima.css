@@ -330,8 +330,8 @@
 }
 
 .maleta-item img {
-  width: 2rem;
-  height: 2rem;
+  width: 6ch;
+  height: 6rem;
   object-fit: contain;
 }
 
@@ -396,9 +396,9 @@
 .maleta-title {
   justify-self: center;
   align-self: end;
-  margin: 0 0 10px;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
+
+  font-size: 0.6rem;
+
   text-transform: uppercase;
   color: var(--accent-soft);
   opacity: 0.9;
@@ -409,10 +409,10 @@
   align-self: center;
   justify-self: center;
 
-  width: min(250px, 78%);
-  height: min(260px, 46%);
+  width: min(3250px, 78%);
 
-  padding: 18px;
+  padding: 10rem 8rem;
+  border-radius: 25px;
   box-sizing: border-box;
 
   display: flex;
@@ -422,9 +422,40 @@
 
 .maleta-packed {
   display: flex;
+  margin-top: 8rem;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-content: flex-start;
+}
+.maleta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* items / maleta */
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.maleta-col-items .maleta-items {
+  justify-content: flex-start;
+}
+
+.maleta-col-drop {
+  display: flex;
+  justify-content: center;
+}
+
+.maleta-drop {
+  margin-top: 0;
+}
+
+/* Responsive: en móvil se apila */
+@media (max-width: 900px) {
+  .maleta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maleta-col-drop {
+    justify-content: flex-start;
+  }
 }
 
 /* Chips dentro */
@@ -438,6 +469,7 @@
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
 }
+/* Modal de viajesitoooo */
 .viaje-modal {
   position: fixed;
   inset: 0;
@@ -472,6 +504,7 @@
   margin: 0 0 0.6rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  font-family: castoro, serif;
 }
 
 .viaje-box p {
@@ -480,14 +513,16 @@
 }
 
 .viaje-ok {
-  border: 0;
-  background: var(--accent-soft);
-  color: #1a0f0a;
-  padding: 0.6rem 1.2rem;
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
   border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  background: #f6b02dbd;
+  color: #522c23;
+  font-size: 0.7rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 @media (max-width: 700px) {
@@ -526,8 +561,20 @@
   .maleta-packed {
     padding-top: 5rem;
   }
+}
+@media (max-width: 360px) {
+  .maleta-drop {
+    min-height: 180px;
+  }
+  .maleta-packed {
+    padding-top: 4rem;
+  }
   .maleta-item img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .maleta.item .span {
+    font-size: 0.75rem;
+    display: none;
   }
 }
