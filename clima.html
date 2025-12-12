@@ -73,27 +73,6 @@
       </section>
       <section class="clima-resumen">
         <article class="clima-card">
-          <h3>¿Cuándo es mejor visitar Cuzco?</h3>
-          <p>
-            La temporada seca va de <strong>mayo a septiembre</strong>, con días
-            soleados y cielos muy despejados: ideal para
-            <strong>Machu Picchu</strong> y trekkings.
-          </p>
-          <p>
-            De <strong>noviembre a marzo</strong> la lluvia es más intensa, pero
-            el paisaje se vuelve muy verde y hay menos turistas.
-          </p>
-
-          <h4>Qué llevar en la maleta</h4>
-          <ul class="clima-list">
-            <li>Capa por capas: camiseta, sudadera y chaqueta corta.</li>
-            <li>Chubasquero ligero o poncho para lluvias sorpresa.</li>
-            <li>Protector solar, gorro y gafas: el sol pega fuerte.</li>
-            <li>Zapatillas cómodas e impermeables para caminar.</li>
-          </ul>
-        </article>
-
-        <article class="clima-card">
           <h3>Tips para la altura y el clima</h3>
           <p>
             Cuzco está a <strong>3 399 m s. n. m.</strong>, por lo que es normal
@@ -138,6 +117,65 @@
             </tbody>
           </table>
         </article>
+        <article class="clima-card">
+          <h3>¿Cuándo es mejor visitar Cuzco?</h3>
+          <p>
+            La temporada seca va de <strong>mayo a septiembre</strong>, con días
+            soleados y cielos muy despejados: ideal para
+            <strong>Machu Picchu</strong> y trekkings.
+          </p>
+          <p>
+            De <strong>noviembre a marzo</strong> la lluvia es más intensa, pero
+            el paisaje se vuelve muy verde y hay menos turistas.
+          </p>
+        </article>
+
+        <article class="clima-card">
+          <h3>Qué llevar en la maleta</h3>
+          <ul class="clima-list">
+            <section
+              class="maleta-wrap"
+              aria-label="Mini juego: prepara tu maleta"
+            >
+              <div class="maleta-items" aria-label="Objetos para arrastrar">
+                <div class="maleta-item" data-item="camiseta">
+                  <img src="media/maleta/camiseta.png" alt="Camiseta" />
+                  <span>Camiseta</span>
+                </div>
+                <div class="maleta-item" data-item="sudadera">
+                  <img src="media/maleta/sudadera.png" alt="Camiseta" />
+                  <span>Sudadera</span>
+                </div>
+                <div class="maleta-item" data-item="gorra">
+                  <img src="media/maleta/gorra.png" alt="gorra" />
+                  <span>Gorra</span>
+                </div>
+                <div class="maleta-item" data-item="gafas">
+                  <img src="media/maleta/gafas.png" alt="gafas" />
+                  <span>Gafas</span>
+                </div>
+                <div class="maleta-item" data-item="zapatillas">
+                  <img src="media/maleta/zapatillas.png" alt="gafas" />
+                  <span>Zapatillas</span>
+                </div>
+              </div>
+
+              <div class="maleta-drop" id="maletaDrop">
+                <img class="maleta-bg" src="media/maleta/maleta.png" alt="" />
+
+                <div class="maleta-ui">
+                  <button class="maleta-reset">Vaciar</button>
+
+                  <div class="maleta-inside">
+                    <div class="maleta-packed"></div>
+                  </div>
+
+                  <p class="maleta-title">Arrastra a la maleta</p>
+                </div>
+              </div>
+            </section>
+          </ul>
+        </article>
       </section>
     </main>
 
@@ -169,11 +207,28 @@
         </div>
       </div>
     </footer>
+    <div class="viaje-modal" id="viajeModal" aria-hidden="true">
+      <div class="viaje-box">
+        <h3>¿Estás listo para tu viaje?</h3>
+        <p>Ya tienes todo en la maleta.<br />¡Buen viaje! ✈️</p>
 
+        <a href="index.html" class="viaje-ok"> Empezar el viaje </a>
+      </div>
+    </div>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Chart.js ANTES de tu clima.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jQuery UI (para draggable/droppable) -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+    <!-- Tu script al final -->
     <script src="js/clima.js"></script>
-    <script src="js/script.js"></script>
   </body>
 </html>

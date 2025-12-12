@@ -1,5 +1,4 @@
 $(function () {
-  // Si no hay jQuery o no hay .tour-card en la página, no hacemos nada
   if (!$(".tour-card").length) return;
 
   // Aseguramos que empiecen cerradas
@@ -23,12 +22,7 @@ $(function () {
   });
 });
 
-//
-//  FILTROS EN lugares.html
-//
-
 $(function () {
-  // Solo ejecutamos esto si existe .lugares-grid (página de actividades)
   if (!$(".lugares-grid").length) return;
 
   const $cards = $(".lugar-card");
