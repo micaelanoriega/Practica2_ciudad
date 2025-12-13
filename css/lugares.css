@@ -3,14 +3,17 @@
 }
 
 .actividades-hero {
-  min-height: 60vh;
+  position: relative;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -7rem;
+
+  margin-top: -8rem;
   padding: 4.5rem 1.5rem 5rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .actividades-hero-bg {
@@ -209,6 +212,7 @@
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .lugar-card:hover {
@@ -278,6 +282,7 @@
   font-weight: 600;
   color: var(--ink);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .tour-body {

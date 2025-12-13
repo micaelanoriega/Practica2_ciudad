@@ -29,18 +29,15 @@
           <a href="gastronomia.html" aria-current="page">Gastronomía</a>
         </nav>
       </div>
-
-      <nav
-        class="nav-links-bottom"
-        id="menu-movil"
-        aria-label="Navegación móvil"
-      >
-        <a href="#intro">Sobre Cuzco</a>
-        <a href="lugares.html">Actividades</a>
-        <a href="clima.html">Clima</a>
-        <a href="gastronomia.html" aria-current="page">Gastronomía</a>
-      </nav>
     </header>
+
+    <!-- Menú móvil -->
+    <nav class="nav-links-bottom" aria-label="Navegación principal">
+      <a href="index.html#ciudad">Sobre Cuzco</a>
+      <a href="lugares.html">Actividades</a>
+      <a href="clima.html">Clima</a>
+      <a href="gastronomia.html" aria-current="page">Gastronomía</a>
+    </nav>
 
     <main class="gastro-wrapper">
       <section class="gastro-hero" id="intro">
@@ -59,46 +56,51 @@
               altura. Comer en Cuzco también es una forma de hacer turismo.
             </p>
           </div>
+        </div>
+      </section>
 
-          <section class="gastro-intro">
-            <header>
-              <h2>Sabores que definen Cuzco</h2>
-            </header>
+      <section class="gastro-intro" aria-labelledby="gastro-intro-title">
+        <header class="gastro-intro-head">
+          <h2 id="gastro-intro-title">Sabores que definen Cuzco</h2>
+          <p class="gastro-intro-lead">
+            La gastronomía cusqueña nace del encuentro entre tradición inca y
+            cocina colonial, con ingredientes de altura como papas nativas, maíz
+            del Valle Sagrado, quinoa y hierbas andinas.
+          </p>
+        </header>
 
+        <div class="gastro-pill-grid">
+          <article class="gastro-pill">
+            <h3>Productos de altura</h3>
             <p>
-              La cocina cusqueña combina ingredientes ancestrales como la papa,
-              el maíz y la quinoa con técnicas coloniales y toques
-              contemporáneos. Desde un caldo caliente en el mercado hasta una
-              cena de autor, aquí la comida es parte de la experiencia del
-              viaje.
+              Papas nativas, habas, maíz gigante, quinoa, tarwi y otros
+              productos cultivados en pisos andinos que definen el sabor local.
             </p>
+          </article>
 
-            <div class="gastro-pill-grid">
-              <article class="gastro-pill">
-                <h3>Productos de altura</h3>
-                <p>
-                  Papas nativas, habas, maíz gigante del Valle Sagrado, quinoa,
-                  tarwi y más ingredientes que solo crecen en los Andes.
-                </p>
-              </article>
+          <article class="gastro-pill">
+            <h3>Cocina de mercado</h3>
+            <p>
+              Jugos, caldos, chicharrones y menús caseros en mercados como San
+              Pedro: mesas compartidas, porciones generosas y sabor real.
+            </p>
+          </article>
 
-              <article class="gastro-pill">
-                <h3>Cocina de mercado</h3>
-                <p>
-                  Jugos, caldos, chicharrones y menús caseros servidos en largas
-                  bancas compartidas con locales.
-                </p>
-              </article>
-
-              <article class="gastro-pill">
-                <h3>Fusión y autor</h3>
-                <p>
-                  Restaurantes que reinterpretan recetas tradicionales con
-                  técnicas modernas y presentaciones cuidadas.
-                </p>
-              </article>
-            </div>
-          </section>
+          <article class="gastro-pill">
+            <h3>Fusión y autor</h3>
+            <p>
+              Chicha (Gastón Acurio) y Cicciolina son clásicos para turistas.
+              Para algo más local, busca menús del día cerca del centro o en San
+              Blas.
+            </p>
+          </article>
+          <div class="gastro-restos">
+            <h2>Restaurantes populares</h2>
+            <p>
+              Chicha · Cicciolina · Pachapapa (San Blas) · Morena Peruvian
+              Kitchen.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -203,46 +205,6 @@
           <button class="platos-dot" type="button" data-index="3"></button>
         </div>
       </section>
-
-      <!-- CALLE & MERCADO -->
-      <section class="gastro-mercado">
-        <header>
-          <h2>Mercados y comida callejera</h2>
-        </header>
-
-        <div class="mercado-layout">
-          <article class="mercado-texto">
-            <p>
-              Los mercados como San Pedro concentran puestos de jugos, panes,
-              quesos, frutas, hierbas y platos caseros. Son el mejor lugar para
-              ver cómo comen realmente los cusqueños.
-            </p>
-            <ul class="mercado-lista">
-              <li>Jugos de frutas andinas recién hechos</li>
-              <li>Pan chuta y otros panes tradicionales</li>
-              <li>Chicharrones, tamales y anticuchos</li>
-              <li>Hierbas y remedios naturales de la zona</li>
-            </ul>
-          </article>
-
-          <aside
-            class="mercado-tips"
-            aria-label="Consejos para comer en mercados"
-          >
-            <h3>Consejos rápidos</h3>
-            <ul>
-              <li>Ve temprano para ver más movimiento local.</li>
-              <li>Pregunta por platos del día o “menú casero”.</li>
-              <li>
-                Si tienes un estómago sensible, empieza con sopas y platos
-                cocidos.
-              </li>
-              <li>Lleva efectivo en soles para pagar fácilmente.</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
       <!-- DRINKS -->
       <section class="gastro-bebidas">
         <header>
@@ -273,6 +235,47 @@
               mezclan con frutas andinas como el maracuyá o el tumbo.
             </p>
           </article>
+        </div>
+      </section>
+
+      <!-- CALLE & MERCADO -->
+      <section class="gastro-mercado">
+        <header>
+          <h2>Mercados y comida callejera</h2>
+        </header>
+
+        <div class="mercado-layout">
+          <article class="mercado-texto">
+            <p>
+              Los mercados como San Pedro concentran puestos de jugos, panes,
+              quesos, frutas, hierbas y platos caseros. Es el mejor lugar para
+              desayunar potente, probar sabores locales y ver el ritmo real de
+              la ciudad.
+            </p>
+
+            <ul class="mercado-lista">
+              <li>Jugos de frutas andinas recién hechos</li>
+              <li>Pan chuta y otros panes tradicionales</li>
+              <li>Chicharrones, tamales y anticuchos</li>
+              <li>Hierbas y remedios naturales de la zona</li>
+            </ul>
+          </article>
+
+          <aside
+            class="mercado-tips"
+            aria-label="Consejos para comer en mercados"
+          >
+            <h3>Consejos rápidos</h3>
+            <ul>
+              <li>Ve temprano para ver más movimiento local.</li>
+              <li>Pregunta por platos del día o “menú casero”.</li>
+              <li>
+                Si tienes un estómago sensible, empieza con sopas y platos
+                cocidos.
+              </li>
+              <li>Lleva efectivo en soles para pagar fácilmente.</li>
+            </ul>
+          </aside>
         </div>
       </section>
     </main>

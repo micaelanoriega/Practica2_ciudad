@@ -6,8 +6,7 @@
 
 :root {
   --rojo: #a7341a;
-  --gris-fondo: #f4f4f4;
-  --gris-sombra: #b3b3b3;
+
   --negro: #111111;
   --blanco: #ffffff;
   --bg: #0b0907;
@@ -190,7 +189,7 @@ body.pagina-inicio.color footer {
   align-items: center;
   padding-bottom: 0.15rem;
   text-decoration: none;
-  color: var(--bg-alt);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   white-space: nowrap;
