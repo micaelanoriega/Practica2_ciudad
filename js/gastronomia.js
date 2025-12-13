@@ -1,4 +1,3 @@
-// js/gastronomia.js
 $(function () {
   const $slides = $(".plato-slide");
   const $dots = $(".platos-dot");

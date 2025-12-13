@@ -447,7 +447,6 @@ body.pagina-inicio.color footer {
   color: var(--accent-soft);
   transform: translateY(-3px);
 }
-/*responsive*/
 
 @media (max-width: 960px) {
   .intro-card-grid {
@@ -456,9 +455,6 @@ body.pagina-inicio.color footer {
 
   .intro-card-media img {
     height: 200px;
-  }
-  .intro-card-grid {
-    grid-template-columns: 1fr;
   }
 }
 

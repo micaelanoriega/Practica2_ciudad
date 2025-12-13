@@ -197,16 +197,12 @@ function initMaletaDragDrop() {
 }
 
 $(function () {
-  // 1) Chart
   cargarGraficoClima();
 
-  // 2) Menú móvil
   initMenuMovil();
 
-  // 3) Drag & drop maleta
   initMaletaDragDrop();
 
-  // 4) resize chart
   $(window).on("resize", function () {
     if (climaChart) climaChart.resize();
   });
