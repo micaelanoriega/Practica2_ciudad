@@ -44,7 +44,7 @@ $(function () {
   // Auto-play
   function startAuto() {
     if (autoInterval) return;
-    autoInterval = setInterval(nextSlide, 3500);
+    autoInterval = setInterval(nextSlide, 2500);
   }
 
   function stopAuto() {
