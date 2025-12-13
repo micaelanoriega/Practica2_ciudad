@@ -162,6 +162,7 @@ body.pagina-inicio.color footer {
   width: auto;
   filter: none;
   animation: girar 6s linear infinite;
+  align-items: center;
 }
 
 @keyframes girar {
@@ -179,8 +180,9 @@ body.pagina-inicio.color footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.8rem;
   font-size: 0.95rem;
+  width: min(90%, 1000px);
 }
 
 .nav-links a {
@@ -369,8 +371,6 @@ body.pagina-inicio.color footer {
   justify-self: flex-end;
 }
 
-/* Hover */
-
 .intro-card-simple:hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 60px rgba(71, 52, 8, 0.634);
@@ -381,34 +381,7 @@ body.pagina-inicio.color footer {
   transform: scale(1.03);
 }
 
-@media (max-width: 960px) {
-  .intro-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .intro-card-media img {
-    height: 200px;
-  }
-  .intro-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .intro-section {
-    padding: 2.5rem 1.2rem 0;
-  }
-
-  .intro-card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-card-media img {
-    height: 210px;
-  }
-}
-
-/*FOOTER NUEVO */
+/*FOOTER  */
 
 .site-footer {
   margin-top: 4rem;
@@ -474,7 +447,34 @@ body.pagina-inicio.color footer {
   color: var(--accent-soft);
   transform: translateY(-3px);
 }
+/*responsive*/
 
+@media (max-width: 960px) {
+  .intro-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro-card-media img {
+    height: 200px;
+  }
+  .intro-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-section {
+    padding: 2.5rem 1.2rem 0;
+  }
+
+  .intro-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card-media img {
+    height: 210px;
+  }
+}
 @media (max-width: 600px) {
   .site-footer {
     padding-inline: 1.2rem;
